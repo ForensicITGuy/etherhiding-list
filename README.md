@@ -1,6 +1,6 @@
 # etherhiding-list
 
-Pi-hole blocklist for blockchain JSON-RPC domains (sourced daily from [Chainlist](https://chainlist.org/rpcs.json)) to help mitigate [EtherHiding](https://cloud.google.com/blog/topics/threat-intelligence/unc5142-etherhiding-distribute-malware) and unauthorized blockchain C2 / RPC traffic.
+Pi-hole blocklist for blockchain JSON-RPC domains (sourced daily from [Chainlist](https://chainlist.org/rpcs.json)) to help mitigate [EtherHiding](https://cloud.google.com/blog/topics/threat-intelligence/unc5142-etherhiding-distribute-malware) and unauthorized blockchain C2 / RPC traffic. Made using Google Gemini.
 
 ## Usage in Pi-hole
 
