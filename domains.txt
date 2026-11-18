@@ -1,6 +1,6 @@
 # Pi-hole Blocklist: Blockchain JSON-RPC Endpoints (Chainlist)
 # Source: https://chainlist.org/rpcs.json
-# Total domains: 5764
+# Total domains: 5777
 
 0.48.club
 01-gravelines-004-01.rpc.tatum.io
@@ -1437,7 +1437,6 @@ block-testnet-v1.somanetwork.io
 blockchain-rpc1.katronai.com
 blockchain-rpc2.katronai.com
 blockchain.dev-universe-bank.com
-blockchain.haradev.com
 blockchain.miyou.io
 blockchain.miyoulab.com
 blockchain.ramestta.com
@@ -1845,6 +1844,7 @@ ethereum-sepolia.therpc.io
 ethereum.public.blockpi.network
 ethereumnodelight.app.runonflux.io
 ethnode.primusmoney.com
+ethras.org
 eticamainnet.eticaprotocol.org
 eticamainnet.eticascan.org
 eto.ash.center
@@ -1910,6 +1910,7 @@ evm-rpc.tucana.zone
 evm-rpc2.ashchain.io
 evm-stoc-mainnet.stochainscan.io
 evm-stoc-testnet.stochainscan.io
+evm-t3.cronos.com
 evm-t3.cronos.org
 evm-testnet.bronos.org
 evm-testnet.clawcoin.com
@@ -1936,6 +1937,7 @@ evm.astar.network
 evm.chiado.wardenprotocol.org
 evm.clawcoin.com
 evm.confluxrpc.com
+evm.cronos.com
 evm.cronos.org
 evm.cryptocurrencydevs.org
 evm.dukong.mantrachain.io
@@ -3025,6 +3027,7 @@ peerpay.su.gy
 pegorpc.com
 pharos.drpc.org
 pikochain.serveousercontent.com
+pinch.network
 planq-public.nodies.app
 plasma-mainnet.gateway.tatum.io
 plasma.api.onfinality.io
@@ -3271,6 +3274,7 @@ rpc-dev01.dolphinode.world
 rpc-develop.fuga.blue
 rpc-devnet-algorand-rollup.a1.milkomeda.com
 rpc-devnet-cardano-evm.c1.milkomeda.com
+rpc-devnet.supra.com
 rpc-devnet.winr.games
 rpc-dubai.mp1network.com
 rpc-echos-mainnet-0.t.conduit.xyz
@@ -3309,6 +3313,7 @@ rpc-kroma.rockx.com
 rpc-l1.inan.in.th
 rpc-l1.jibchain.net
 rpc-main.gurunetwork.ai
+rpc-main.phase.xyz
 rpc-main1.qiblockchain.online
 rpc-main2.qiblockchain.online
 rpc-mainnet-1.geb.network
@@ -3436,6 +3441,8 @@ rpc-test.gurunetwork.ai
 rpc-test.haust.network
 rpc-test.manoracoin.com
 rpc-test.orqus.io
+rpc-test.qday.info
+rpc-test.stapleport.com
 rpc-test.statemesh.net
 rpc-test.tresleches.finance
 rpc-test2.photonchain.io
@@ -3668,7 +3675,7 @@ rpc.bexc.io
 rpc.bexchain.com
 rpc.bggchain.com
 rpc.bie.ai
-rpc.bighive-beets.io
+rpc.bighive-beets.com
 rpc.binarychain.org
 rpc.binibit.com
 rpc.birdlayer.xyz
@@ -3820,6 +3827,7 @@ rpc.devnet.tajirchain.com
 rpc.devnet.xrplevm.org
 rpc.devolvedai.com
 rpc.dexilla.com
+rpc.dgcr.dagcore.net
 rpc.diadata.org
 rpc.digitalregion.jp
 rpc.dimai.ai
@@ -3987,6 +3995,7 @@ rpc.h2chain.io
 rpc.hairylabs.io
 rpc.ham.fun
 rpc.hanchain.cc
+rpc.haradev.com
 rpc.hashbit.org
 rpc.haven1.org
 rpc.heima-parachain.heima.network
@@ -4314,6 +4323,7 @@ rpc.pyrachain.io
 rpc.pyropechain.com
 rpc.q.org
 rpc.qchain.kr
+rpc.qday.io
 rpc.qkacoin.org
 rpc.qom.one
 rpc.qrdx.org
@@ -4321,9 +4331,11 @@ rpc.qtestnet.org
 rpc.quadrans.io
 rpc.quai.network
 rpc.quantumscan.org
+rpc.quantvestrix.io
 rpc.qubetics.com
 rpc.quicknode.mainnet.arc.io
 rpc.quorum.sps.dev.kode.ru
+rpc.qvtxaeon.io
 rpc.r5.network
 rpc.racaille.dev
 rpc.radiustech.xyz
@@ -4415,6 +4427,7 @@ rpc.sriscan.com
 rpc.ssquad.games
 rpc.stable.xyz
 rpc.stage.fluence.dev
+rpc.stapleport.com
 rpc.starryscan.com
 rpc.startale.com
 rpc.starworksglobal.com
