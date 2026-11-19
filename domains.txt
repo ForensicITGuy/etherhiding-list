@@ -1,6 +1,6 @@
 # Pi-hole Blocklist: Blockchain JSON-RPC Endpoints (Chainlist)
 # Source: https://chainlist.org/rpcs.json
-# Total domains: 5777
+# Total domains: 5781
 
 0.48.club
 01-gravelines-004-01.rpc.tatum.io
@@ -1097,6 +1097,7 @@ aic.acria.ai
 aium-rpc-dev.viacube.com
 albireo-rpc.playfi.ai
 alephzero.drpc.org
+alpen.mainnet.alpen.org
 alpen.testnet.alpen.org
 alpha-1-replica-0.bedrock-goerli.optimism.io
 alpha-1-replica-1.bedrock-goerli.optimism.io
@@ -1281,6 +1282,7 @@ arbitrum.xdaichain.com
 arc-rpc.publicnode.com
 arc-testnet-rpc.publicnode.com
 arc-testnet.drpc.org
+arc.drpc.org
 arcadia.khalani.network
 archive.galaxychain.co
 archive.mindchain.info
@@ -1494,6 +1496,7 @@ bsc-testnet.rpc.sentio.xyz
 bsc-testnet.therpc.io
 bsc-ws-node.nariox.org
 bsc.api.pocket.network
+bsc.backrun.io
 bsc.blockpi.network
 bsc.blockrazor.xyz
 bsc.drpc.org
@@ -1598,7 +1601,6 @@ cro-testnet.gateway.tatum.io
 cronos-evm-rpc.publicnode.com
 cronos-rpc.blockreq.com
 cronos-rpc.ecroxscan.com
-cronos-rpc.elk.finance
 cronos-testnet.drpc.org
 cronos-zkevm-testnet.drpc.org
 cronos-zkevm.drpc.org
@@ -1749,6 +1751,7 @@ eki-chain.onrender.com
 elves-core1.alvey.io
 elves-core2.alvey.io
 elves-core3.alvey.io
+elysium.drpc.org
 emberchain.org
 emerald.oasis.io
 en-bkk.x-phere.com
@@ -1811,6 +1814,7 @@ eth-testnet.4everland.org
 eth-testnet.platformd.io
 eth.api.onfinality.io
 eth.api.pocket.network
+eth.backrun.io
 eth.bd.evmos.dev
 eth.bd.evmos.org
 eth.blockrazor.xyz
@@ -1950,7 +1954,6 @@ evm.humans.stakepool.dev.br
 evm.infinitedrive.xyz
 evm.integralayer.com
 evm.kava-rpc.com
-evm.kava.chainstacklabs.com
 evm.kava.io
 evm.klyntar.org
 evm.klyntarscan.org
@@ -2424,7 +2427,6 @@ lisk.drpc.org
 lisk.gateway.tenderly.co
 lit-chain-rpc.litprotocol.com
 lite.chain.opentensor.ai
-liteforge.rpc.caldera.xyz
 litermark.org
 loa-rpc.litprotocol.com
 londonpublic.alphabetnetwork.org
@@ -2758,7 +2760,6 @@ miama.vidainnovasystem.top
 mind-smart-chain.rpc.thirdweb.com
 miner.testnet.ticko.xyz
 miner.ticko.xyz
-mmf-rpc.xstaking.sg
 moca-testnet.drpc.org
 moca.drpc.org
 mochan.org
@@ -3183,6 +3184,7 @@ robinhood-sepolia-rpc.publicnode.com
 robinhood-testnet.drpc.org
 robinhood.api.pocket.network
 robinhood.daybreak-rpc.network
+robinhood.drpc.org
 robinhood.rpc.blxrbdn.com
 rollapp.jrpc.cumulo.com.es
 rollux.rpc.tanenbaum.io
@@ -3312,6 +3314,7 @@ rpc-internal.mezo.org
 rpc-kroma.rockx.com
 rpc-l1.inan.in.th
 rpc-l1.jibchain.net
+rpc-light.swissdlt.tech
 rpc-main.gurunetwork.ai
 rpc-main.phase.xyz
 rpc-main1.qiblockchain.online
@@ -4326,6 +4329,7 @@ rpc.qchain.kr
 rpc.qday.io
 rpc.qkacoin.org
 rpc.qom.one
+rpc.qomx.io
 rpc.qrdx.org
 rpc.qtestnet.org
 rpc.quadrans.io
@@ -4452,7 +4456,6 @@ rpc.syrax.global
 rpc.syscoin.org
 rpc.taaqo.com
 rpc.tac.build
-rpc.taiko.tools
 rpc.taiko.xyz
 rpc.tajirchain.com
 rpc.tanenbaum.io
@@ -4525,6 +4528,7 @@ rpc.testnet.lachain.network
 rpc.testnet.lemonchain.io
 rpc.testnet.lens.dev
 rpc.testnet.lightchain.ai
+rpc.testnet.liteforge.zeeve.net
 rpc.testnet.lukso.network
 rpc.testnet.mantle.xyz
 rpc.testnet.mawari.net
@@ -5034,6 +5038,7 @@ skale-base.skalenodes.com
 smartbch.fountainhead.cash
 smartbch.greyh.at
 snaxchain.drpc.org
+sobya-evm-rpc.nodesafe-app.xyz
 socialsmartchain.digitalnext.business
 socket.buycex.net
 socket.qubetics.com
@@ -5114,7 +5119,6 @@ syscoin.public-rpc.com
 t-evmos-jsonrpc.kalia.network
 tac.drpc.org
 tahoe.metalblockchain.org
-taiko-json-rpc.stakely.io
 taiko-mainnet.4everland.org
 taiko-mainnet.gateway.tenderly.co
 taiko-rpc.publicnode.com
