@@ -7,7 +7,9 @@ from update_domains import (
     extract_domain,
     extract_domains_from_chainlist,
     format_blocklist,
+    format_hosts_blocklist,
     main,
+    read_existing_domains,
 )
 
 
@@ -115,14 +117,16 @@ class TestExtractDomainsFromChainlist(unittest.TestCase):
 
 
 class TestFormatAndMain(unittest.TestCase):
-    def test_format_blocklist(self):
+    def test_format_blocklist_with_timestamp(self):
         output = format_blocklist(
             ["a.example.com", "b.example.com"],
             source_url="https://chainlist.org/rpcs.json",
+            timestamp="2026-11-21T12:00:00Z",
         )
         expected = (
             "# Pi-hole Blocklist: Blockchain JSON-RPC Endpoints (Chainlist)\n"
             "# Source: https://chainlist.org/rpcs.json\n"
+            "# Last updated: 2026-11-21T12:00:00Z\n"
             "# Total domains: 2\n"
             "\n"
             "a.example.com\n"
@@ -130,25 +134,129 @@ class TestFormatAndMain(unittest.TestCase):
         )
         self.assertEqual(output, expected)
 
+    def test_format_hosts_blocklist_with_timestamp(self):
+        output = format_hosts_blocklist(
+            ["a.example.com", "b.example.com"],
+            source_url="https://chainlist.org/rpcs.json",
+            timestamp="2026-11-21T12:00:00Z",
+        )
+        expected = (
+            "# Pi-hole Blocklist (Hosts Format): Blockchain JSON-RPC Endpoints (Chainlist)\n"
+            "# Source: https://chainlist.org/rpcs.json\n"
+            "# Last updated: 2026-11-21T12:00:00Z\n"
+            "# Total domains: 2\n"
+            "\n"
+            "0.0.0.0 a.example.com\n"
+            "0.0.0.0 b.example.com\n"
+        )
+        self.assertEqual(output, expected)
+
+    def test_read_existing_domains_plain_and_hosts(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            plain_path = Path(tmpdir) / "domains.txt"
+            hosts_path = Path(tmpdir) / "hosts.txt"
+            missing_path = Path(tmpdir) / "missing.txt"
+
+            self.assertIsNone(read_existing_domains(missing_path))
+
+            plain_path.write_text(
+                "# Header comment\n\nb.example.com\na.example.com\n",
+                encoding="utf-8",
+            )
+            self.assertEqual(
+                read_existing_domains(plain_path),
+                ["a.example.com", "b.example.com"],
+            )
+
+            hosts_path.write_text(
+                "# Hosts header\n0.0.0.0 b.example.com\n0.0.0.0 a.example.com\n",
+                encoding="utf-8",
+            )
+            self.assertEqual(
+                read_existing_domains(hosts_path),
+                ["a.example.com", "b.example.com"],
+            )
+
+    @patch("update_domains.get_utc_timestamp")
     @patch("update_domains.fetch_chainlist_data")
-    def test_main_writes_output_file(self, mock_fetch):
-        mock_fetch.return_value = [
-            {"rpc": ["https://rpc.ankr.com/eth", {"url": "https://eth.llamarpc.com"}]}
-        ]
+    def test_main_writes_both_files_and_only_updates_timestamp_when_domains_change(
+        self, mock_fetch, mock_timestamp
+    ):
         with tempfile.TemporaryDirectory() as tmpdir:
             out_file = Path(tmpdir) / "domains.txt"
-            exit_code = main(["--output", str(out_file)])
+            hosts_file = Path(tmpdir) / "hosts.txt"
+
+            # Day 1: Initial creation
+            mock_fetch.return_value = [
+                {"rpc": ["https://rpc.ankr.com/eth", {"url": "https://eth.llamarpc.com"}]}
+            ]
+            mock_timestamp.return_value = "2026-11-21T00:00:00Z"
+
+            exit_code = main(
+                ["--output", str(out_file), "--hosts-output", str(hosts_file)]
+            )
             self.assertEqual(exit_code, 0)
-            content = out_file.read_text(encoding="utf-8")
-            self.assertIn("eth.llamarpc.com\nrpc.ankr.com\n", content)
+
+            plain_day1 = out_file.read_text(encoding="utf-8")
+            hosts_day1 = hosts_file.read_text(encoding="utf-8")
+            self.assertIn("# Last updated: 2026-11-21T00:00:00Z\n", plain_day1)
+            self.assertIn("eth.llamarpc.com\nrpc.ankr.com\n", plain_day1)
+            self.assertIn("# Last updated: 2026-11-21T00:00:00Z\n", hosts_day1)
+            self.assertIn("0.0.0.0 eth.llamarpc.com\n0.0.0.0 rpc.ankr.com\n", hosts_day1)
+
+            # Day 2: Same domains -> timestamp must NOT change
+            mock_timestamp.return_value = "2026-11-22T00:00:00Z"
+            exit_code = main(
+                ["--output", str(out_file), "--hosts-output", str(hosts_file)]
+            )
+            self.assertEqual(exit_code, 0)
+            self.assertEqual(out_file.read_text(encoding="utf-8"), plain_day1)
+            self.assertEqual(hosts_file.read_text(encoding="utf-8"), hosts_day1)
+
+            # Day 3: Domain added -> timestamp MUST update to Day 3
+            mock_fetch.return_value = [
+                {
+                    "rpc": [
+                        "https://rpc.ankr.com/eth",
+                        {"url": "https://eth.llamarpc.com"},
+                        "https://new-rpc.example.com",
+                    ]
+                }
+            ]
+            mock_timestamp.return_value = "2026-11-23T00:00:00Z"
+            exit_code = main(
+                ["--output", str(out_file), "--hosts-output", str(hosts_file)]
+            )
+            self.assertEqual(exit_code, 0)
+            plain_day3 = out_file.read_text(encoding="utf-8")
+            hosts_day3 = hosts_file.read_text(encoding="utf-8")
+            self.assertIn("# Last updated: 2026-11-23T00:00:00Z\n", plain_day3)
+            self.assertIn("new-rpc.example.com\n", plain_day3)
+            self.assertIn("# Last updated: 2026-11-23T00:00:00Z\n", hosts_day3)
+            self.assertIn("0.0.0.0 new-rpc.example.com\n", hosts_day3)
+
+            # Day 4: Domain removed -> timestamp MUST update to Day 4
+            mock_fetch.return_value = [{"rpc": ["https://eth.llamarpc.com"]}]
+            mock_timestamp.return_value = "2026-11-24T00:00:00Z"
+            exit_code = main(
+                ["--output", str(out_file), "--hosts-output", str(hosts_file)]
+            )
+            self.assertEqual(exit_code, 0)
+            plain_day4 = out_file.read_text(encoding="utf-8")
+            hosts_day4 = hosts_file.read_text(encoding="utf-8")
+            self.assertIn("# Last updated: 2026-11-24T00:00:00Z\n", plain_day4)
+            self.assertNotIn("rpc.ankr.com", plain_day4)
+            self.assertIn("# Last updated: 2026-11-24T00:00:00Z\n", hosts_day4)
+            self.assertNotIn("rpc.ankr.com", hosts_day4)
 
     @patch("update_domains.fetch_chainlist_data")
     def test_main_raises_when_no_domains_extracted(self, mock_fetch):
         mock_fetch.return_value = [{"rpc": ["http://127.0.0.1:8545"]}]
         with tempfile.TemporaryDirectory() as tmpdir:
             out_file = Path(tmpdir) / "domains.txt"
+            hosts_file = Path(tmpdir) / "hosts.txt"
             with self.assertRaises(RuntimeError):
-                main(["--output", str(out_file)])
+                main(["--output", str(out_file), "--hosts-output", str(hosts_file)])
 
 
 if __name__ == "__main__":
