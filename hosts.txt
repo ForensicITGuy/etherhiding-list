@@ -1,7 +1,7 @@
 # Pi-hole Blocklist (Hosts Format): Blockchain JSON-RPC Endpoints (Chainlist)
 # Source: https://chainlist.org/rpcs.json
-# Last updated: 2026-11-21T17:31:41Z
-# Total domains: 5781
+# Last updated: 2026-11-24T07:21:30Z
+# Total domains: 5778
 
 0.0.0.0 0.48.club
 0.0.0.0 01-gravelines-004-01.rpc.tatum.io
@@ -148,6 +148,7 @@
 0.0.0.0 1285.rpc.thirdweb.com
 0.0.0.0 1287.rpc.thirdweb.com
 0.0.0.0 1288.rpc.thirdweb.com
+0.0.0.0 129-221-199-191.sslip.io
 0.0.0.0 129.rpc.thirdweb.com
 0.0.0.0 130.rpc.thirdweb.com
 0.0.0.0 1300.rpc.thirdweb.com
@@ -1082,7 +1083,7 @@
 0.0.0.0 accesschainapp.site
 0.0.0.0 adi.drpc.org
 0.0.0.0 adilchain-rpc.io
-0.0.0.0 adiri.tel
+0.0.0.0 adiri.rpc.telcoin.network
 0.0.0.0 aeneid-evm-rpc.krews.xyz
 0.0.0.0 aeneid.datarpc.io
 0.0.0.0 aeneid.storyrpc.io
@@ -1111,6 +1112,7 @@
 0.0.0.0 alphab.ai
 0.0.0.0 alphanet.load.network
 0.0.0.0 alphatestnet-evm-rpc.qubetics.work
+0.0.0.0 alt-rpc.minethepla.net
 0.0.0.0 altair.api.onfinality.io
 0.0.0.0 altar-rpc.ceremonies.ai
 0.0.0.0 amxrpc.link
@@ -1135,7 +1137,6 @@
 0.0.0.0 api-gateway.skymavis.com
 0.0.0.0 api-iotex-mainnet.n.dwellir.com
 0.0.0.0 api-linea-mainnet-archive.n.dwellir.com
-0.0.0.0 api-lisk-mainnet.n.dwellir.com
 0.0.0.0 api-mainnet.plato.xyz
 0.0.0.0 api-mantle-mainnet.n.dwellir.com
 0.0.0.0 api-opbnb-mainnet.n.dwellir.com
@@ -1246,6 +1247,7 @@
 0.0.0.0 apiprod.sshivanshcoin.com
 0.0.0.0 apothem.xdcrpc.com
 0.0.0.0 app.freighttrust.net
+0.0.0.0 app.riverbit.io
 0.0.0.0 app.testnet.strato.nexus
 0.0.0.0 appchaintestnet.rpc.caldera.xyz
 0.0.0.0 arb-blueberry-testnet.drpc.org
@@ -1274,7 +1276,6 @@
 0.0.0.0 arbitrum-sepolia.api.onfinality.io
 0.0.0.0 arbitrum-sepolia.drpc.org
 0.0.0.0 arbitrum-sepolia.gateway.tenderly.co
-0.0.0.0 arbitrum-sepolia.therpc.io
 0.0.0.0 arbitrum.api.onfinality.io
 0.0.0.0 arbitrum.drpc.org
 0.0.0.0 arbitrum.gateway.tenderly.co
@@ -1325,7 +1326,6 @@
 0.0.0.0 avalanche-c-chain-rpc.publicnode.com
 0.0.0.0 avalanche-fuji-c-chain-rpc.publicnode.com
 0.0.0.0 avalanche-fuji.drpc.org
-0.0.0.0 avalanche-fuji.therpc.io
 0.0.0.0 avalanche-mainnet.gateway.tenderly.co
 0.0.0.0 avalanche-public.nodies.app
 0.0.0.0 avalanche-rpc.blockreq.com
@@ -1371,7 +1371,6 @@
 0.0.0.0 base-sepolia.drpc.org
 0.0.0.0 base-sepolia.gateway.tenderly.co
 0.0.0.0 base-sepolia.rpc.sentio.xyz
-0.0.0.0 base-sepolia.therpc.io
 0.0.0.0 base-testnet.api.pocket.network
 0.0.0.0 base.api.onfinality.io
 0.0.0.0 base.api.pocket.network
@@ -1430,8 +1429,8 @@
 0.0.0.0 blast.din.dev
 0.0.0.0 blast.drpc.org
 0.0.0.0 blast.gateway.tenderly.co
-0.0.0.0 blast.therpc.io
 0.0.0.0 blastl2-mainnet.public.blastapi.io
+0.0.0.0 bleno.com.br
 0.0.0.0 blessnet-sepolia-testnet.rpc.caldera.xyz
 0.0.0.0 blessnet.calderachain.xyz
 0.0.0.0 block-chain.alt.technology
@@ -1494,7 +1493,6 @@
 0.0.0.0 bsc-testnet.drpc.org
 0.0.0.0 bsc-testnet.public.blastapi.io
 0.0.0.0 bsc-testnet.rpc.sentio.xyz
-0.0.0.0 bsc-testnet.therpc.io
 0.0.0.0 bsc-ws-node.nariox.org
 0.0.0.0 bsc.api.pocket.network
 0.0.0.0 bsc.backrun.io
@@ -1509,6 +1507,7 @@
 0.0.0.0 build.onbeam.com
 0.0.0.0 builder-rpc1.0xblockswap.com
 0.0.0.0 builder-rpc2.0xblockswap.com
+0.0.0.0 builder.pulsonic.cloud
 0.0.0.0 c.onical.org
 0.0.0.0 c100501n3.deinfra.net
 0.0.0.0 c3n1.thepower.io
@@ -1845,7 +1844,6 @@
 0.0.0.0 ethereum-sepolia-rpc.publicnode.com
 0.0.0.0 ethereum-sepolia.gateway.tatum.io
 0.0.0.0 ethereum-sepolia.rpc.thyme.sh
-0.0.0.0 ethereum-sepolia.therpc.io
 0.0.0.0 ethereum.public.blockpi.network
 0.0.0.0 ethereumnodelight.app.runonflux.io
 0.0.0.0 ethnode.primusmoney.com
@@ -1885,6 +1883,7 @@
 0.0.0.0 evm-rpc-testnet.bitbadges.io
 0.0.0.0 evm-rpc-testnet.infinitedrive.xyz
 0.0.0.0 evm-rpc-testnet.sei-apis.com
+0.0.0.0 evm-rpc-testnet.xitchain.com
 0.0.0.0 evm-rpc-testnet.xitcoin.org
 0.0.0.0 evm-rpc-vana.j-node.net
 0.0.0.0 evm-rpc-vana.josephtran.xyz
@@ -2251,6 +2250,7 @@
 0.0.0.0 hyperliquid.api.onfinality.io
 0.0.0.0 hyperliquid.drpc.org
 0.0.0.0 hyperliquid.rpc.blxrbdn.com
+0.0.0.0 hypr-testnet.tail9d9f7e.ts.net
 0.0.0.0 hypra.rpc.thirdweb.com
 0.0.0.0 hz.rpc.qkiscan.cn
 0.0.0.0 id-mainnet.somanetwork.io
@@ -2356,7 +2356,6 @@
 0.0.0.0 kava.api.onfinality.io
 0.0.0.0 kava.api.pocket.network
 0.0.0.0 kava.drpc.org
-0.0.0.0 kava.therpc.io
 0.0.0.0 kcc-rpc.com
 0.0.0.0 kcc.mytokenpocket.vip
 0.0.0.0 kcs-mainnet.gateway.tatum.io
@@ -2420,7 +2419,6 @@
 0.0.0.0 linea.decubate.com
 0.0.0.0 linea.drpc.org
 0.0.0.0 linea.rpc.sentio.xyz
-0.0.0.0 linea.therpc.io
 0.0.0.0 linqto-dev.com
 0.0.0.0 lisk-mainnet.gateway.tatum.io
 0.0.0.0 lisk-sepolia.drpc.org
@@ -2881,7 +2879,6 @@
 0.0.0.0 node1.ozonechain.io
 0.0.0.0 node1.pegorpc.com
 0.0.0.0 node1.pmtchain.com
-0.0.0.0 node1.telcoin.network
 0.0.0.0 node1.testnet.gaiaopen.network
 0.0.0.0 node1.testnet.treasurenet.io
 0.0.0.0 node1.tmyblockchain.org
@@ -2900,7 +2897,6 @@
 0.0.0.0 node2.mainnet.gon.network
 0.0.0.0 node2.pegorpc.com
 0.0.0.0 node2.pmtchain.com
-0.0.0.0 node2.telcoin.network
 0.0.0.0 node2.testnet.ozonechain.io
 0.0.0.0 node2.testnet.treasurenet.io
 0.0.0.0 node2.treasurenet.io
@@ -2915,7 +2911,6 @@
 0.0.0.0 node3.mainnet.gon.network
 0.0.0.0 node3.pegorpc.com
 0.0.0.0 node3.pmtchain.com
-0.0.0.0 node3.telcoin.network
 0.0.0.0 node3.testnet.treasurenet.io
 0.0.0.0 node3.treasurenet.io
 0.0.0.0 node4-mainnet.decimalchain.com
@@ -2924,7 +2919,6 @@
 0.0.0.0 node4.fibo-rpc.asia
 0.0.0.0 node4.mainnet.gon.network
 0.0.0.0 node4.pmtchain.com
-0.0.0.0 node4.telcoin.network
 0.0.0.0 node5.fenixst.io
 0.0.0.0 node5.fibo-api.asia
 0.0.0.0 node5.fibo-rpc.asia
@@ -2995,7 +2989,6 @@
 0.0.0.0 optimism-sepolia.api.onfinality.io
 0.0.0.0 optimism-sepolia.drpc.org
 0.0.0.0 optimism-sepolia.gateway.tenderly.co
-0.0.0.0 optimism-sepolia.therpc.io
 0.0.0.0 optimism-testnet.drpc.org
 0.0.0.0 optimism.api.onfinality.io
 0.0.0.0 optimism.drpc.org
@@ -3036,6 +3029,7 @@
 0.0.0.0 plasma.drpc.org
 0.0.0.0 plex-rpc.plexfinance.us
 0.0.0.0 ploutos-rpc.bitassetchain.io
+0.0.0.0 pls-rpc369.xyz
 0.0.0.0 plume-mainnet.gateway.tatum.io
 0.0.0.0 plume.drpc.org
 0.0.0.0 plusmain.net
@@ -3208,7 +3202,6 @@
 0.0.0.0 rpc-1.orbinum.io
 0.0.0.0 rpc-1.qts-chain.com
 0.0.0.0 rpc-1.testnet.japanopenchain.org
-0.0.0.0 rpc-1.testnet.orbinum.io
 0.0.0.0 rpc-1.zyx.network
 0.0.0.0 rpc-2-testnet.exorium.net
 0.0.0.0 rpc-2.japanopenchain.org
@@ -3217,7 +3210,6 @@
 0.0.0.0 rpc-2.qts-chain.com
 0.0.0.0 rpc-2.testnet.dailycrypto.net
 0.0.0.0 rpc-2.testnet.japanopenchain.org
-0.0.0.0 rpc-2.testnet.orbinum.io
 0.0.0.0 rpc-2.zyx.network
 0.0.0.0 rpc-292.champagnesphere.net
 0.0.0.0 rpc-3.japanopenchain.org
@@ -3347,6 +3339,7 @@
 0.0.0.0 rpc-mainnet.findora.org
 0.0.0.0 rpc-mainnet.firestation.io
 0.0.0.0 rpc-mainnet.funkichain.com
+0.0.0.0 rpc-mainnet.galdrionscan.com
 0.0.0.0 rpc-mainnet.goldsmartchain.com
 0.0.0.0 rpc-mainnet.guapcoinx.com
 0.0.0.0 rpc-mainnet.hybridchain.ai
@@ -3479,6 +3472,7 @@
 0.0.0.0 rpc-testnet.c8ntinuum.link
 0.0.0.0 rpc-testnet.carrchain.io
 0.0.0.0 rpc-testnet.celeschain.org
+0.0.0.0 rpc-testnet.commonworld.one
 0.0.0.0 rpc-testnet.cpchain.com
 0.0.0.0 rpc-testnet.cyclenetwork.io
 0.0.0.0 rpc-testnet.dbcwallet.io
@@ -3493,6 +3487,7 @@
 0.0.0.0 rpc-testnet.evnode.org
 0.0.0.0 rpc-testnet.exoscan.net
 0.0.0.0 rpc-testnet.fuga.blue
+0.0.0.0 rpc-testnet.galdrionscan.com
 0.0.0.0 rpc-testnet.gameswift.io
 0.0.0.0 rpc-testnet.geekout-pte.com
 0.0.0.0 rpc-testnet.gokite.ai
@@ -3554,7 +3549,6 @@
 0.0.0.0 rpc-testnet.vne.network
 0.0.0.0 rpc-testnet.vordium.com
 0.0.0.0 rpc-testnet.w-chain.com
-0.0.0.0 rpc-testnet.whitechain.io
 0.0.0.0 rpc-testnet.xfair.ai
 0.0.0.0 rpc-testnet.xone.org
 0.0.0.0 rpc-testnet.xone.plus
@@ -3592,6 +3586,8 @@
 0.0.0.0 rpc.actionblockchain.org
 0.0.0.0 rpc.acuteangle.com
 0.0.0.0 rpc.adifoundation.ai
+0.0.0.0 rpc.adiri.tel
+0.0.0.0 rpc.adiri.telcoin.network
 0.0.0.0 rpc.aere.network
 0.0.0.0 rpc.agents-coin.com
 0.0.0.0 rpc.aicchain.io
@@ -3692,6 +3688,7 @@
 0.0.0.0 rpc.bitkubchain.io
 0.0.0.0 rpc.bitlayer-rpc.com
 0.0.0.0 rpc.bitlayer.org
+0.0.0.0 rpc.bitnet-community.org
 0.0.0.0 rpc.bitnetmoney.com
 0.0.0.0 rpc.bitnetmoney.org
 0.0.0.0 rpc.bitroot.co
@@ -4292,6 +4289,7 @@
 0.0.0.0 rpc.playblock.io
 0.0.0.0 rpc.plugin.global
 0.0.0.0 rpc.plume.org
+0.0.0.0 rpc.plusmain.net
 0.0.0.0 rpc.pmon.xyz
 0.0.0.0 rpc.pointledger.net
 0.0.0.0 rpc.polis.tech
@@ -4310,6 +4308,7 @@
 0.0.0.0 rpc.primeanetwork.com
 0.0.0.0 rpc.primox.online
 0.0.0.0 rpc.private.mev-x.com
+0.0.0.0 rpc.privaterounds.com
 0.0.0.0 rpc.prodao.club
 0.0.0.0 rpc.prodax.io
 0.0.0.0 rpc.pruv.network
@@ -4473,7 +4472,6 @@
 0.0.0.0 rpc.tcgverse.xyz
 0.0.0.0 rpc.tea.xyz
 0.0.0.0 rpc.teamblockchain.team
-0.0.0.0 rpc.telcoin.network
 0.0.0.0 rpc.telos.net
 0.0.0.0 rpc.tenet.org
 0.0.0.0 rpc.tensora.sh
@@ -4526,6 +4524,7 @@
 0.0.0.0 rpc.testnet.kyotoprotocol.io
 0.0.0.0 rpc.testnet.l2.ethstorage.io
 0.0.0.0 rpc.testnet.lachain.network
+0.0.0.0 rpc.testnet.latheon.xyz
 0.0.0.0 rpc.testnet.lemonchain.io
 0.0.0.0 rpc.testnet.lens.dev
 0.0.0.0 rpc.testnet.lightchain.ai
@@ -4545,6 +4544,7 @@
 0.0.0.0 rpc.testnet.onenesslabs.io
 0.0.0.0 rpc.testnet.onmidas.xyz
 0.0.0.0 rpc.testnet.oonechain.com
+0.0.0.0 rpc.testnet.orbinum.io
 0.0.0.0 rpc.testnet.os.sophon.com
 0.0.0.0 rpc.testnet.oychain.io
 0.0.0.0 rpc.testnet.pandasea.io
@@ -4693,6 +4693,7 @@
 0.0.0.0 rpc.zchain.org
 0.0.0.0 rpc.zchains.com
 0.0.0.0 rpc.zebrocoin.app
+0.0.0.0 rpc.zebvixchain.com
 0.0.0.0 rpc.zeeth.io
 0.0.0.0 rpc.zerion.io
 0.0.0.0 rpc.zero.thebinaryholdings.com
@@ -4951,7 +4952,6 @@
 0.0.0.0 scroll.api.pocket.network
 0.0.0.0 scroll.drpc.org
 0.0.0.0 scroll.rpc.sentio.xyz
-0.0.0.0 scroll.therpc.io
 0.0.0.0 seed.btcix.org
 0.0.0.0 seed.omchain.io
 0.0.0.0 seed.omlira.com
@@ -5065,7 +5065,6 @@
 0.0.0.0 sonic.api.onfinality.io
 0.0.0.0 sonic.api.pocket.network
 0.0.0.0 sonic.drpc.org
-0.0.0.0 sonic.therpc.io
 0.0.0.0 sophia-rpc.mijk.pro
 0.0.0.0 sparkling-autumn-dinghy.worldchain-mainnet.quiknode.pro
 0.0.0.0 sparta-rpc.polis.tech
@@ -5126,7 +5125,6 @@
 0.0.0.0 taiko.api.pocket.network
 0.0.0.0 taiko.drpc.org
 0.0.0.0 taiko.rpc.sentio.xyz
-0.0.0.0 taiko.therpc.io
 0.0.0.0 tangible-real.gateway.tenderly.co
 0.0.0.0 tapi.accesscan.io
 0.0.0.0 tapi.dynoprotocol.com
@@ -5535,7 +5533,6 @@
 0.0.0.0 unichain-sepolia.rpc.thyme.sh
 0.0.0.0 unichain.api.onfinality.io
 0.0.0.0 unichain.drpc.org
-0.0.0.0 unichain.therpc.io
 0.0.0.0 unite-mainnet.g.alchemy.com
 0.0.0.0 unite-testnet.g.alchemy.com
 0.0.0.0 us-east.lycanchain.com
